@@ -7,10 +7,11 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cors());
+app.use(express.static("client/build"));
 app.post("/estate_mail", async (req, res) => {
   const body = req.body;
   const {
@@ -191,11 +192,6 @@ app.post("/partner_form", cors(), async (req, res) => {
   });
 });
 const PORT = process.env.PORT || 4000;
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
