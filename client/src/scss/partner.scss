@@ -1,0 +1,158 @@
+.partner {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1350px;
+  margin-top: 102px;
+}
+.banner {
+  background-color: #fcb002;
+  padding: 100px 0;
+  text-align: center;
+  h2 {
+    color: #fff;
+    max-width: 420px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+  }
+  .btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+  }
+}
+.pGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .gray {
+    background-color: #f5f5fa;
+  }
+}
+.gText {
+  h3 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #000;
+  }
+  padding: 40px;
+  h6 {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 25px;
+    max-width: 470px;
+    color: #686868;
+  }
+}
+.fpartners {
+  margin: 70px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    color: #000;
+    max-width: 353px;
+    text-align: center;
+    // margin: 0 auto;
+  }
+  img {
+    margin: 30px 0;
+  }
+}
+.pGrid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 100px;
+}
+.partner-form {
+  background-color: #fcb002;
+  padding: 70px;
+  h2 {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #fff;
+  }
+  input,
+  select {
+    padding: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+    outline: 0;
+    border-radius: 7px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    border: none;
+    background-color: #fbd67e80;
+    color: #f9f9f9;
+  }
+  .btn {
+    background-color: #fff;
+    color: #fcb002;
+    font-weight: bold;
+    margin-left: auto;
+    display: flex;
+  }
+  select {
+    background-image: url("../assets/chevron-white.svg");
+    background-position: right 15px top 50%;
+  }
+}
+.grid-img {
+  background: url("../assets/partner-form.png") center/cover no-repeat;
+}
+@media (max-width: 1000px) {
+  .partner-form {
+    padding: 35px;
+  }
+}
+@media (max-width: 800px) {
+  .pGrid {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+    .gText {
+      padding: 0;
+      grid-row: 1/2;
+      h3 {
+        text-align: center;
+      }
+    }
+    .gray {
+      height: 200px;
+    }
+    .sect {
+      text-align: center;
+    }
+  }
+  .pGrid2 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .banner {
+    padding: 50px 30px;
+    h2 {
+      font-size: 22px;
+    }
+  }
+  .partner-form {
+    padding: 25px;
+    h2 {
+      font-size: 22px;
+    }
+  }
+  .fpartners {
+    h2 {
+      font-size: 22px;
+    }
+  }
+  .gText {
+    h3 {
+      font-size: 20px;
+    }
+  }
+}

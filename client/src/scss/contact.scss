@@ -1,0 +1,286 @@
+.contactCont {
+  margin: 0 auto;
+  margin-top: 102px;
+  width: 90vw;
+  max-width: 1350px;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.cText {
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 20.5px;
+    color: #000;
+  }
+}
+.cInfo {
+  margin-top: 70px;
+  p {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    color: #000;
+    &:nth-child(1) {
+      max-width: 50%;
+    }
+    &:nth-child(2) {
+      margin: 25px 0;
+    }
+    span {
+      margin-right: 12px;
+      img {
+        max-width: none;
+        width: 25px;
+      }
+    }
+  }
+}
+.cGrid2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  width: 85%;
+  z-index: 1;
+  input,
+  textarea {
+    padding: 20px 15px;
+    border: 2px solid #fcb002;
+    border-radius: 10px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+.input1 {
+  position: relative;
+  &::after {
+    content: url("../assets/user.png");
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    right: 24px;
+    transform: translateY(-50%);
+  }
+}
+.input2 {
+  margin: 40px 0;
+  position: relative;
+  &::after {
+    content: url("../assets/email 1.png");
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    right: 24px;
+    transform: translateY(-50%);
+    opacity: 0.5;
+  }
+}
+.input3 {
+  position: relative;
+  &::after {
+    content: url("../assets/email 2.png");
+    position: absolute;
+    top: 25px;
+    max-width: 15px;
+    right: 24px;
+  }
+}
+*::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.contactSocial {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.072);
+    padding: 20px 13px;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 1px 1px 59px -8px #fcb10279;
+      border-color: #fff;
+    }
+    span {
+      margin-right: 20px;
+      img {
+        max-width: none;
+      }
+    }
+  }
+}
+.contact-btn {
+  outline: none;
+  border: none;
+  padding: 15px 20px;
+  background: #fcb002;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: #fff;
+  width: fit-content;
+  margin-top: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  span {
+    display: flex;
+    align-items: center;
+  }
+  svg {
+    margin-left: 8px;
+    width: 100%;
+    height: 100%;
+    width: 20px;
+    fill: #fff;
+  }
+}
+.newsCont {
+  background-color: #fcb002;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.news {
+  width: 90vw;
+  max-width: 1350px;
+  margin: 0 auto;
+  h2 {
+    color: #fff;
+    max-width: 510px;
+  }
+  p {
+    color: #fff;
+    max-width: 510px;
+    margin: 20px 0;
+  }
+  .inputEmail,
+  .inputTel {
+    padding: 20px 14px;
+    border-radius: 5px;
+    border: 0;
+    width: 300px;
+  }
+  .contact-btn {
+    background-color: #fff;
+    color: #fcb002;
+    margin-top: 20px;
+    svg {
+      fill: #fcb002;
+    }
+  }
+}
+.inputEmail {
+  margin-right: 20px;
+}
+.kk {
+  margin-top: 20px;
+  input {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  label {
+    color: #fff;
+  }
+}
+@media (max-width: 1000px) {
+  .contactSocial {
+    max-width: 700px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 80px;
+    gap: 30px;
+  }
+}
+@media (max-width: 830px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .cGrid2 {
+    margin-left: 0;
+    width: 100%;
+    input,
+    textarea {
+      padding: 15px;
+      // border: 1px solid #fcb002;
+    }
+    .contact-btn {
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+  .contact-btn {
+    font-size: 14px;
+  }
+  .contactSocial a {
+    padding: 15px 10px;
+  }
+}
+@media (max-width: 688px) {
+  .inputEmail {
+    // margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .cInfo {
+    p {
+      font-size: 15px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .inputEmail {
+    margin-right: 0;
+  }
+  .cInputs {
+    text-align: center;
+    .contact-btn {
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+  .cText {
+    h2 {
+      font-size: 30px;
+    }
+  }
+  .contactSocial {
+    max-width: 400px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    margin-top: 80px;
+    gap: 30px;
+    a {
+      font-size: 15px;
+      span {
+        width: 35px;
+      }
+    }
+  }
+  .nText {
+    text-align: center;
+    margin-bottom: 30px;
+    h2 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  .kk {
+    label {
+      font-size: 15px;
+    }
+  }
+}
