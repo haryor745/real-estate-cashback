@@ -1,0 +1,94 @@
+.gallery {
+  margin-top: 50px;
+  background-color: #fff;
+  padding-bottom: 200px;
+  position: relative;
+  z-index: 1;
+  padding-top: 70px;
+}
+.glInner {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.gText {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  h2 {
+    max-width: 570px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+.gGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.gCard {
+  display: flex;
+  flex-direction: column;
+  img {
+    margin: 10px auto;
+  }
+  .teamName {
+    color: #fff;
+    background-color: #ff5402;
+    padding: 9px;
+    border-radius: 5px;
+    margin: 5px auto;
+    max-width: 264px;
+    width: 100%;
+    text-align: center;
+  }
+  p {
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1000px) {
+  .gText {
+    h2 {
+      font-size: 34px;
+    }
+  }
+  .gGrid {
+    column-gap: 35px;
+  }
+}
+@media (max-width: 750px) {
+  .gText {
+    margin-top: 10px;
+    margin-bottom: 70px;
+    h2 {
+      max-width: none;
+      text-align: center;
+      font-size: 28px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .gGrid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  .gCard {
+    .teamName {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      margin-left: none;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .gText {
+    h2 {
+      font-size: 28px;
+    }
+  }
+}

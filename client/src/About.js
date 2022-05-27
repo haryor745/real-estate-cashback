@@ -59,12 +59,12 @@ function About({ setContent }) {
       <div className="abInner">
         <div className="abText">
           <h3>OUR VALUES</h3>
-          <h1>The common spirit charterizes us.</h1>
+          <h1>The common spirit characterizes us.</h1>
           <p>
             We have a vision to help many other people to be even more
             successful.
           </p>
-          <p>This is what we effectively work for everyday.</p>
+          <p>This is what we do and why we work everyday.</p>
           <div className="btnAbout">
             {showBtn ? (
               <button className="btn" onClick={() => setShowBtn(false)}>
@@ -72,29 +72,24 @@ function About({ setContent }) {
               </button>
             ) : (
               <p className="knowText">
-                Zylus Elites Cooperative limited is founded in 2018 under the
-                auspices of Dr. Oluwatosin Olatujoye who is the present Chairman
-                and president of the cooperative. The Cooperative through the
-                commitment of its members and the desire to proffer solutions to
-                the yearnings of the people became a business conglomerate
-                saddled with not just the responsibilities of gathering funds
-                but, provide shelter, resources to every member of the society
-                through clear cut business plan with dividends shared by member
-                of the cooperative. <br /> Zylus Cooperative as a business
-                conglomerate manages and controls the activities of all member
-                company. It is the mother company of Zylus Homes and Properties
-                - a fast-growing real estate firm in Nigeria, Zylus Investment.{" "}
+                Real Estate Cashback Cooperative limited was created in 2018 to
+                offer members access to opportunities in multiple markets, where
+                members can invest collectively and share dividend . The
+                cooperative also provide members with innovative tools to save,
+                access loans and build long term wealth.
                 <br /> <br />
-                Zylus Elites Cooperative is an internationally recognized
-                business Capital organization with interests in Real Estate
-                Investment, Property Sales, Human Capital Development,
+                As an internationally recognized business Capital organization,
+                RECB Cooperative Limited provides members access to
+                opportunities in Real Estate Investment, Property Sales,
                 Agriculture, Infrastructure and General Construction, Property
-                Valuation, Designs and Printing, Media, Transport and Logistics,
-                Traveling and Tours, Property Management and many more. <br />{" "}
-                <br /> The cooperative’s corporate culture speaks
-                Professionalism, Excellence, Integrity, Knowledge, and Service
-                to offering top-notch business relationship to all our customers
-                across all our operational subsidiaries.
+                acquisition Property Management and many more. <br /> <br />
+                RECB Cooperative limited manages and controls innovative
+                products such as Property Savings Scheme, Real Estate Cash Back
+                and Target Save.
+                <br /> <br />
+                The company’s culture speaks Professionalism, Excellence,
+                Integrity, Knowledge, and Service to offering top-notch business
+                relationship to all members of the cooperative.
               </p>
             )}
           </div>

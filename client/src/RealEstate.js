@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./scss/realestate.scss";
 import investBox from "./assets/invest-box.svg";
 import returnsBox from "./assets/returns-box.svg";
@@ -18,27 +19,26 @@ function RealEstate({ setContent }) {
       }}
     >
       <div className="eText">
-        <h1>Real Estate Cash Back</h1>
+        <h1>Real Estate Cashback</h1>
         <p>
           Capture and build your real estate investment/portfolio with{" "}
           <span>Real Estate Cashback.</span>
         </p>
         <form>
-          <input
+          {/* <input
             type="email"
             name="estate-email"
-            placeholder="info@zylusgroup.com"
+            placeholder="info@realestatecashbackltd.com"
             required
             onSubmit={(e) => {
               e.preventDefault();
             }}
-          />
-          <button type="submit" className="btn">
-            Get Started
-          </button>
+          /> */}
+          <Link to="/member" className="btn">
+            Become a Member
+          </Link>
         </form>
       </div>
-      <div className="video"></div>
       <div className="rsGrid">
         <div className="rsText">
           <div className="bio">
@@ -97,8 +97,8 @@ function RealEstate({ setContent }) {
           <div className="bio">
             <h2>Get multiple interest on investment.</h2>
             <p>
-              Create the way you want with what you want. Paper adapts to the
-              way your team captures ideas.
+              Build your finances with ease with our secured and seamless
+              products.
             </p>
           </div>
           <div className="part">
@@ -147,7 +147,7 @@ function RealEstate({ setContent }) {
       <div className="trio">
         <div className="trio-text">
           <h2>Get Inspired</h2>
-          <p>Here's how Real Estate Cash Back helps you.</p>
+          <p>Here's how Real Estate Cashback helps you.</p>
         </div>
         <div className="trio-grid">
           <div className="block">
@@ -180,7 +180,7 @@ function RealEstate({ setContent }) {
         <input
           type="email"
           name="estate-email"
-          placeholder="info@zylusgroup.com"
+          placeholder="info@realestatecashbackltd.com"
           required
           onSubmit={(e) => {
             e.preventDefault();

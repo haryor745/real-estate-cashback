@@ -19,9 +19,9 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   h2 {
-    color: #fcb002;
+    color: #ff5402;
     font-size: 22px;
-    max-width: 230px;
+    max-width: 350px;
   }
   ul {
     flex-direction: column;
@@ -30,8 +30,9 @@
   li {
     color: #686868;
     margin-bottom: 18px;
+    font-weight: 500;
     svg {
-      fill: #fcb002;
+      fill: #ff5402;
       margin-right: 8px;
     }
   }
@@ -69,7 +70,7 @@
     width: 80%;
     outline: 0;
     border-radius: 7px;
-    border: 2px solid #fcb002;
+    border: 2px solid #ff5402;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
   }
@@ -98,10 +99,10 @@ input[type="file"] {
   justify-content: center;
   outline: 0;
   border-radius: 7px;
-  border: 2px solid #fcb002;
+  border: 2px solid #ff5402;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
-  color: #fcb002;
+  color: #ff5402;
 }
 .uploads {
   label {
@@ -111,7 +112,7 @@ input[type="file"] {
     font-weight: 600;
   }
   svg {
-    stroke: #fcb002;
+    stroke: #ff5402;
     margin-right: 8px;
     stroke-width: 3px;
   }
@@ -147,8 +148,8 @@ input[type="checkbox"] {
   width: 80%;
   cursor: pointer;
   &.set {
-    border-left: 1px solid #fcb002;
-    border-bottom: 1px solid #fcb002;
+    border-left: 1px solid #ff5402;
+    border-bottom: 1px solid #ff5402;
   }
 }
 textarea {
@@ -252,7 +253,7 @@ textarea {
     margin-left: 0;
     border-radius: 8px;
     &.set {
-      border: 1px solid #fcb002;
+      border: 1px solid #ff5402;
     }
   }
 }

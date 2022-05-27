@@ -1,7 +1,20 @@
 const express = require("express");
 const app = express();
 const multer = require("multer");
+const { google } = require("googleapis");
 require("dotenv").config();
+
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const REDIRECT_URI = "https://developers.google.com/oauthplayground";
+const REFRESH_TOKEN = process.env.REFRESH_TOKEN;
+
+const oAuth2Client = new google.auth.OAuth2(
+  CLIENT_ID,
+  CLIENT_SECRET,
+  REDIRECT_URI
+);
+oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -39,16 +52,22 @@ app.post("/estate_mail", async (req, res) => {
     rMail,
     rPhone,
   } = body;
-  let transporter = nodemailer.createTransport({
+  const accessToken = await oAuth2Client.getAccessToken();
+
+  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      type: "OAuth2",
+      user: "realestatecashbackltd@gmail.com",
+      clientId: CLIENT_ID,
+      clientSecret: CLIENT_SECRET,
+      refreshToken: REFRESH_TOKEN,
+      accessToken: accessToken,
     },
   });
   await transporter.sendMail({
     from: cEmail,
-    to: "alabiupwork@gmail.com",
+    to: "realestatecashbackltd@gmail.com",
     subject: "New Real Estate Cash Back entry!",
     html: `<h1>Real Estate Cash Back Form</h1>
     <p><b>Client’s Full Name</b>: ${cfName}</p>
@@ -97,16 +116,22 @@ app.post("/pdss_mail", cors(), async (req, res) => {
     rMail2,
     rPhone2,
   } = body;
-  let transporter = nodemailer.createTransport({
+  const accessToken = await oAuth2Client.getAccessToken();
+
+  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      type: "OAuth2",
+      user: "realestatecashbackltd@gmail.com",
+      clientId: CLIENT_ID,
+      clientSecret: CLIENT_SECRET,
+      refreshToken: REFRESH_TOKEN,
+      accessToken: accessToken,
     },
   });
   await transporter.sendMail({
     from: cEmail2,
-    to: "alabiupwork@gmail.com",
+    to: "realestatecashbackltd@gmail.com",
     subject: "New PDSS entry!",
     html: `<h1>PDSS Form</h1>
     <p><b>Client’s Full Name</b>: ${cfName2}</p>
@@ -131,16 +156,22 @@ app.post("/pdss_mail", cors(), async (req, res) => {
 app.post("/contact_mail", cors(), async (req, res) => {
   const body = req.body;
   const { name, email, message } = body;
-  let transporter = nodemailer.createTransport({
+  const accessToken = await oAuth2Client.getAccessToken();
+
+  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      type: "OAuth2",
+      user: "realestatecashbackltd@gmail.com",
+      clientId: CLIENT_ID,
+      clientSecret: CLIENT_SECRET,
+      refreshToken: REFRESH_TOKEN,
+      accessToken: accessToken,
     },
   });
   await transporter.sendMail({
     from: email,
-    to: "alabiupwork@gmail.com",
+    to: "realestatecashbackltd@gmail.com",
     subject: "New contact form entry!",
     html: `<h1>Contact Form Entry</h1>
     <p><b>Name</b>: ${name}</p>
@@ -151,16 +182,22 @@ app.post("/contact_mail", cors(), async (req, res) => {
 app.post("/newsletter", cors(), async (req, res) => {
   const body = req.body;
   const { cEmail, phoneNo } = body;
-  let transporter = nodemailer.createTransport({
+  const accessToken = await oAuth2Client.getAccessToken();
+
+  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      type: "OAuth2",
+      user: "realestatecashbackltd@gmail.com",
+      clientId: CLIENT_ID,
+      clientSecret: CLIENT_SECRET,
+      refreshToken: REFRESH_TOKEN,
+      accessToken: accessToken,
     },
   });
   await transporter.sendMail({
     from: cEmail,
-    to: "alabiupwork@gmail.com",
+    to: "realestatecashbackltd@gmail.com",
     subject: "Newsletter Registration!",
     html: `<h1>New entry to join Newsletter</h1>
     <p><b>Email</b>: ${cEmail}</p>
@@ -170,16 +207,22 @@ app.post("/newsletter", cors(), async (req, res) => {
 app.post("/partner_form", cors(), async (req, res) => {
   const body = req.body;
   const { pfName, plName, wMail, company, nation, city } = body;
-  let transporter = nodemailer.createTransport({
+  const accessToken = await oAuth2Client.getAccessToken();
+
+  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      type: "OAuth2",
+      user: "realestatecashbackltd@gmail.com",
+      clientId: CLIENT_ID,
+      clientSecret: CLIENT_SECRET,
+      refreshToken: REFRESH_TOKEN,
+      accessToken: accessToken,
     },
   });
   await transporter.sendMail({
     from: wMail,
-    to: "alabiupwork@gmail.com",
+    to: "realestatecashbackltd@gmail.com",
     subject: "Partner Registration!",
     html: `<h1>Partner Form Entry</h1>
     <p><b>First Name</b>: ${pfName}</p>
@@ -191,7 +234,7 @@ app.post("/partner_form", cors(), async (req, res) => {
     `,
   });
 });
-const PORT = process.env.PORT || 4000;
+const PORT = 7822;
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });

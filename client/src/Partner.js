@@ -102,7 +102,7 @@ function Partner({ setContent }) {
         </div>
         <div className="fpartners">
           <h2>Trusted by the world's most innovative companies.</h2>
-          <img src={partners} alt="partners" />
+          {/* <img src={partners} alt="partners" /> */}
         </div>
         <div className="pGrid2">
           <div className="grid-img"></div>

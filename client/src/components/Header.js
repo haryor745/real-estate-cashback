@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import { BsChevronDown } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
@@ -12,6 +12,7 @@ function Header({ content, setContent }) {
   const [navOpen, setNavOpen] = useState("");
   const [drop1, setDrop1] = useState(false);
   const [drop2, setDrop2] = useState(false);
+  const [drop3, setDrop3] = useState(false);
   // useEffect(() => {
   //   if (window.innerWidth < 1000) {
   //     setMobile(true);
@@ -66,18 +67,22 @@ function Header({ content, setContent }) {
               <BsChevronDown />
             </li>
             <li className="linkList">
+              <Link to="/gallery" className="link">
+                Gallery
+              </Link>
+            </li>
+            <li className="linkList">
               <Link to="/partner" className="link">
                 Partner
               </Link>
             </li>
-            <li className="linkList">
-              <Link to="/contact" className="link">
-                Contact Us
-              </Link>
+            <li className="linkList hk">
+              <a className="link hk">Help</a>
+              <BsChevronDown />
             </li>
             <li className="linkList">
               <Link to="/member" className="link btn">
-                Subscribe
+                Become a member
               </Link>
             </li>
           </ul>
@@ -97,13 +102,13 @@ function Header({ content, setContent }) {
                 {drop1 && (
                   <div className="hidden">
                     <div>
-                      <Link to="/">XaveNow</Link>
+                      <Link to="/">Target Savings</Link>
                     </div>
                     <div>
-                      <Link to="/pdss">PDSS</Link>
+                      <Link to="/pdss">PSS</Link>
                     </div>
                     <div>
-                      <Link to="/real-estate">Real Estate Cash Back</Link>
+                      <Link to="/real-estate">Real Estate Cashback</Link>
                     </div>
                   </div>
                 )}
@@ -120,6 +125,9 @@ function Header({ content, setContent }) {
                 {drop2 && (
                   <div className="hidden">
                     <div>
+                      <Link to="/management">The Management</Link>
+                    </div>
+                    <div>
                       <Link to="/about">About Us</Link>
                     </div>
                     <div>
@@ -129,10 +137,30 @@ function Header({ content, setContent }) {
                 )}
               </li>
               <li className="sList">
-                <Link to="/partner">Partner</Link>
+                <Link to="/gallery">Gallery</Link>
               </li>
               <li className="sList">
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/partner">Partner</Link>
+              </li>
+              <li className="sList dropdown">
+                <div
+                  className="opener"
+                  onClick={() => {
+                    setDrop3(!drop3);
+                  }}
+                >
+                  Help
+                </div>
+                {drop3 && (
+                  <div className="hidden">
+                    <div>
+                      <Link to="/help">Get Help</Link>
+                    </div>
+                    <div>
+                      <Link to="/faqs">FAQs</Link>
+                    </div>
+                  </div>
+                )}
               </li>
             </ul>
           </div>
@@ -160,17 +188,17 @@ function Header({ content, setContent }) {
         >
           <div className="contBig hk">
             <div className="cont hk">
-              <a href="#" className="cta hk">
+              <Link to="/target-savings" className="cta hk">
                 <span className="hk">
                   <img src={asImg} alt="img" className="hk" />
                 </span>{" "}
-                XaveNow
-              </a>
+                Target Savings
+              </Link>
               <Link to="/pdss" className="cta hk">
                 <span>
                   <img src={dsImg} alt="img" className="hk" />
                 </span>{" "}
-                PDSS
+                PSS
               </Link>
             </div>
             <Link to="/real-estate" className="cta hk">
@@ -193,12 +221,35 @@ function Header({ content, setContent }) {
           }}
         >
           <div className="contBig2 hk">
+            <Link to="/management" className="cta hk">
+              The Management
+            </Link>
             <Link to="/about" className="cta hk">
               About Us
             </Link>
             <a href="#" className="cta hk">
               Career
             </a>
+          </div>
+        </aside>
+      )}
+      {content === "Help" && (
+        <aside
+          className="menu hk"
+          style={{
+            left: center,
+          }}
+          onMouseOver={() => {
+            setContent("Help");
+          }}
+        >
+          <div className="contBig2 hk">
+            <Link to="/help" className="cta hk">
+              Get Help
+            </Link>
+            <Link to="/faqs" className="cta hk">
+              FAQs
+            </Link>
           </div>
         </aside>
       )}

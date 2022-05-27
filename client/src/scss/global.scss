@@ -17,7 +17,7 @@ code {
 }
 .btn {
   padding: 15px 20px;
-  background: #fcb002;
+  background: #ff5402;
   border-radius: 5px;
   display: inline-block;
   font-family: "Montserrat", sans-serif;
@@ -28,9 +28,9 @@ code {
 .cta {
   display: flex;
   align-items: center;
-  color: #fcb002;
+  color: #ff5402;
   svg {
-    fill: #fcb002;
+    fill: #ff5402;
   }
 }
 img {
@@ -45,4 +45,8 @@ select {
   // position: relative;
   background: url("../assets/chevron-black.svg") right 10px top 50%/12px
     no-repeat;
+}
+p {
+  color: #686868;
+  font-weight: 500;
 }

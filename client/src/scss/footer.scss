@@ -5,6 +5,9 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  ul {
+    list-style: none;
+  }
 }
 .grid {
   margin-top: 85px;
@@ -15,7 +18,7 @@
     color: #fff;
   }
   p {
-    color: #fcb002;
+    color: #ff5402;
     margin-bottom: 14px;
   }
   li {

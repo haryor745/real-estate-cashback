@@ -1,9 +1,10 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/footer-logo.png";
 import fb from "../assets/facebook.svg";
 import linkedin from "../assets/linkedin.svg";
 import twitter from "../assets/twitter.svg";
 import "../scss/footer.scss";
+import { Link } from "react-router-dom";
 function Footer({ setContent }) {
   const year = new Date().getFullYear();
   return (
@@ -20,22 +21,22 @@ function Footer({ setContent }) {
           </div>
           <ul className="grid grid2">
             <li>
-              <p>Product</p>
+              <p>Products</p>
             </li>
             <li>
-              <a href="#">Product</a>
+              <Link to="/real-estate">Real Estate Cashback</Link>
             </li>
             <li>
-              <a href="#">Integrations</a>
+              <Link to="/target-savings">Target Savings</Link>
             </li>
             <li>
-              <a href="#">Plans</a>
+              <Link to="/pdss">PSS</Link>
             </li>
             <li>
-              <a href="#">Integrations</a>
+              <Link to="/faqs">FAQs</Link>
             </li>
             <li>
-              <a href="#">Plans</a>
+              <Link to="/faqs">Plans</Link>
             </li>
           </ul>
           <ul className="grid grid3">
@@ -43,19 +44,10 @@ function Footer({ setContent }) {
               <p>Customer Stories</p>
             </li>
             <li>
-              <a href="#">XaveNow</a>
+              <Link to="/gallery">Testimonials</Link>
             </li>
             <li>
-              <a href="#">PDSS</a>
-            </li>
-            <li>
-              <a href="#">Real Estate Cashback</a>
-            </li>
-            <li>
-              <a href="#">PDSS</a>
-            </li>
-            <li>
-              <a href="#">Real Estate Cashback</a>
+              <Link to="/gallery">Gallery</Link>
             </li>
           </ul>
           <ul className="grid grid4">
@@ -63,7 +55,7 @@ function Footer({ setContent }) {
               <p>Company</p>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <Link to="/about">About Us</Link>
             </li>
             <li>
               <a href="#">Privacy Policy</a>
@@ -72,7 +64,7 @@ function Footer({ setContent }) {
               <a href="#">Terms of Service</a>
             </li>
             <li>
-              <a href="#">Privacy Policy</a>
+              <Link to="/faqs">FAQs</Link>
             </li>
             <li>
               <a href="#">Terms of Service</a>
@@ -91,17 +83,11 @@ function Footer({ setContent }) {
             <li>
               <a href="#">Security</a>
             </li>
-            <li>
-              <a href="#">Documentation</a>
-            </li>
-            <li>
-              <a href="#">Security</a>
-            </li>
           </ul>
         </div>
         <footer>
           <div className="copy">
-            Copyright @{year} Zylus Elite. All Rights Reserved
+            Copyright @{year} Real Estate Cashback. All Rights Reserved
           </div>
           <div className="socialIcons">
             <a href="#" className="fb">

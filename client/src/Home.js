@@ -22,28 +22,28 @@ const platform = [
   {
     id: 1,
     img: cardImg1,
-    title: "XaveNow",
-    text: "XaveNow is an innovative savings platform designed to help members of the Zylus Elite Cooperative Multipurpose Society access savings, wealth growth tools and investment opportunities",
+    title: "Target Savings",
+    text: "Target Saving is an innovative savings platform designed to help members of the Real Estate Cashback Housing Cooperative Society LTD access savings, wealth growth tools and investment opportunities.",
     link: "/",
-    btnName: "XaveNow",
+    btnName: "Target Savings",
     color: "one",
   },
   {
     id: 2,
     img: cardImg2,
-    title: "Real Estate Cash Back",
-    text: "Real Estate Cashback is a Real Estate trading scheme established by Zylus Elite Corporative in 2018 and managed under Zylus Investment Limited.",
+    title: "Real Estate Cashback",
+    text: "Real Estate Cashback is a real estate trading initiative developed by Real Estate Cashback Cooperative Society Limited. It involves the acquisition of landed properties in a prime location for the purpose of reselling for profit maximization.",
     link: "/real-estate",
-    btnName: "Cash Back",
+    btnName: "Cashback",
     color: "two",
   },
   {
     id: 3,
     img: cardImg3,
-    title: "PDSS",
-    text: "PDSS is specially designed for low and medium-income earners who are willing to make returns through real estate investment and want to save towards owning or developing a property.",
+    title: "PSS",
+    text: "Property Savings Scheme is a real estate investment platform that allows every individual to save monthly for a period of one (1) year to co-join the development of a building project to resale and earn from the profit generated collectively as a cooperative.",
     link: "/pdss",
-    btnName: "PDSS",
+    btnName: "PSS",
     color: "three",
   },
 ];
@@ -52,32 +52,32 @@ const finance1 = [
     id: 1,
     img: asImg,
     img1: asImg1,
-    title: "Auto Save",
-    text: "This allows users to automate their savings. With autosave, users can choose the frequency of deductions from their account (daily, weekly and monthly) and earn 10% ROI",
-    btnText: "XaveNow Auto Save",
+    title: "Access to Loans",
+    text: "Property Activation Loan is a typeof loan offered to members of the cooperative where members have access to financing for the initial deposit on a property.",
+    btnText: "Loans",
   },
   {
     id: 2,
     img: dsImg,
     img1: dsImg1,
-    title: "Development Saving",
+    title: "Profit Sharing",
     text: "Allows every individual invest monthly on installment basis for a period of one (1) year to develop a building project for resale and earn a 25% return.",
-    btnText: "PDSS",
+    btnText: "PSS",
   },
   {
     id: 3,
     img: rsImg,
     img1: rsImg1,
-    title: "Development Saving",
-    text: "It is a Real Estate trading initiative that involves the acquisition and development of a large expanse of land for building, ownership, and profit maximization.",
-    btnText: "Cash Back",
+    title: "Home Ownership",
+    text: "Real Estate Cashback provides access for members of the cooperative to acquire and develop large expanse of land for building, ownership and profit maximization.",
+    btnText: "Cashback",
   },
   {
     id: 4,
     img: fcImg,
     img1: fcImg1,
-    title: "Fixed Commmision",
-    text: "TARGET XAVE allows users to save towards a goal while earning 12% ROI on their savings. ",
+    title: "Savings",
+    text: "Target Savings allows users to save towards a goal while earning returns on savings. ",
     btnText: "Target Savings",
   },
 ];
@@ -96,13 +96,16 @@ function SectionA({ setContent }) {
         </div>
         <div className="heroText">
           <p className="p1">
-            <span>Zylus Elite Cooperative</span>
+            <span>Real Estate Cashback Cooperative</span>
           </p>
-          <h1>
-            Infuse in untapped potential with <span>Elite</span> opportunities.
-          </h1>
-          <p>Launching your new investment opportunities with Zylus Elite.</p>
-          <form
+          <h1>We help you achieve your financial goals.</h1>
+          <p>
+            Experience the possibilities of accessing innovative product to grow
+            your finances when you <span>save</span>, <span>invest</span> and{" "}
+            {""}
+            <span>earn</span>.
+          </p>
+          {/* <form
             className="heroBtnCont"
             onSubmit={(e) => {
               e.preventDefault();
@@ -118,10 +121,13 @@ function SectionA({ setContent }) {
                 setSubscribe(e.target.value);
               }}
             />
-            <button type="submit" className="btn">
-              Subscribe
-            </button>
-          </form>
+          </form> */}
+          <Link to="/member" className="btn">
+            Subscribe
+          </Link>
+          <Link to="/about" className="plain">
+            Learn more
+          </Link>
         </div>
       </main>
     </div>
@@ -132,7 +138,7 @@ function SectionB() {
     <div className="creamCont2">
       <div className="section sectB">
         <div className="text">
-          <h2>One platform, Endless potentials.</h2>
+          <h2>One platform, endless potentials.</h2>
           <p>
             An all-in-one finance management platform that makes planning,
             investment and wealth creation experiences easier than ever.
@@ -166,7 +172,7 @@ function SectionC() {
       <div className="section sectC">
         <div className="cText">
           <h1>Have full control over your finances and business.</h1>
-          <p>Earn 12% - 35% when you take merit of the investment plans.</p>
+          <p>Earn dividends when you take merit of the investment plans.</p>
         </div>
         <div className="cContent1">
           {finance1.map((item) => {
@@ -198,9 +204,9 @@ function SectionD() {
             Gain access to platforms optimized for loans and secure savings.
           </h2>
           <p>
-            We have designed series of products capable of solving your savings
-            and loans issues. They also guarantee high imvestment rates, quick
-            acccess to loans and secured saving platform.
+            We have designed series of products to offer you access to savings
+            and loans. They also guarantee profit sharing among members, quick
+            access to loans and secured savings opportunities.
           </p>
           <ul>
             <li>
@@ -222,7 +228,7 @@ function SectionD() {
               <span>
                 <BsCheckLg />
               </span>{" "}
-              High interest on savings
+              Guaranteed returns on savings
             </li>
             <li>
               {" "}
@@ -250,10 +256,10 @@ function SectionD() {
             opportunities.
           </h2>
           <p>
-            Elite corporative also provides business opportunities in real
-            estate and real estate investment with carefully designed products
-            which makes it easy to invest properly and also thoroughly manage
-            your investments.
+            Real Estate Cashback corporative also provides business
+            opportunities in real estate and real estate investment with
+            carefully designed products which makes it easy to invest properly
+            and also thoroughly manage your investments.
           </p>
           <ul>
             <li>
@@ -302,8 +308,8 @@ function SectionE() {
             <h4>CASE STUDY</h4>
             <h3>Trusted by the world's most profit centric teams</h3>
             <p>
-              The Zylus Elite cooperative helps individuals and businesses scale
-              their finances and businesses positively.
+              Real Estate Cashback helps individuals and businesses scale their
+              finances and businesses positively.
             </p>
             <a href="#" className="btn">
               Read More
@@ -311,30 +317,29 @@ function SectionE() {
           </div>
           <div className="review2">
             <h5>
-              Zylus Cooperative as a business conglomerate manages and controls
-              the activities of all member company. It is the mother company of
-              Zylus Homes and Properties -a fast-growing real estate firm in
-              Nigeria, Zylus Investment.
+              Since Investing and Partnering with Real Estate Cashback
+              Cooperative, I’ve had immense success and turnaround in my
+              finances.
             </h5>
             <div className="person">
               <div className="pImg">
                 <img src={pImg} alt="person-image" />
               </div>
               <div className="pText">
-                <h6>Alabi Samuel</h6>
-                <p>Digital Marketer and Strategist</p>
+                <h6>Adebayo Joy</h6>
+                {/* <p>Digital Marketer and Strategist</p> */}
               </div>
             </div>
           </div>
         </div>
         <div className="member">
           <h2>
-            Join Zylus Cooperative within minutes, improve your finance within
-            hours.
+            Join Real Estate Cashback within minutes, improve your finance
+            within hours.
           </h2>
           <p>
-            Join the Zylus cooperative and have access to special finance tips
-            and offers that would help build your business.
+            Join the Real Estate Cashback and have access to special finance
+            tips and offers that would help build your business.
           </p>
           <Link to="/member">
             <a className="btn">Subscribe</a>

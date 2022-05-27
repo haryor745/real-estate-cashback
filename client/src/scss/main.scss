@@ -21,7 +21,7 @@
     position: absolute;
     top: 0;
     left: 10px;
-    fill: #fcb002;
+    fill: #ff5402;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
@@ -71,19 +71,28 @@ svg {
 .heroText {
   h1 {
     font-size: 48px;
-    max-width: 700px;
+    max-width: 580px;
   }
   p {
-    max-width: 480px;
+    max-width: 439px;
     margin: 30px 0;
     font-weight: 600;
     font-size: 17px;
+    color: #9c9e9f;
   }
   .p1 {
     margin-bottom: 20px;
   }
   span {
-    color: #fcb002;
+    color: #ff5402;
+  }
+  .plain {
+    margin-left: 40px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .btn {
+    padding: 14px 32px;
   }
 }
 .text {
@@ -126,7 +135,7 @@ svg {
     margin-bottom: 30px;
   }
   .img.one {
-    background-color: #fcb002;
+    background-color: #ff5402;
   }
   .img.two {
     background-color: #13ab74;
@@ -138,22 +147,29 @@ svg {
     margin: 15px 0;
     max-width: 330px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
   }
   .ctaCont {
     margin-top: 20px;
   }
   h3 {
-    color: #fcb002;
+    color: #ff5402;
     font-weight: 600;
     margin-bottom: 10px;
     font-size: 20px;
   }
 }
-.card2 {
+.card1 {
   .upper {
     p {
-      margin-bottom: 25px;
+      margin-bottom: 51px;
+    }
+  }
+}
+.card3 {
+  .upper {
+    p {
+      margin-bottom: 30px;
     }
   }
 }
@@ -188,7 +204,7 @@ svg {
     display: flex;
     align-items: center;
     svg {
-      fill: #fcb002;
+      fill: #ff5402;
       margin-right: 7px;
     }
   }
@@ -251,6 +267,10 @@ svg {
     margin: 30px 0;
     max-width: 510px;
   }
+  li {
+    color: #686868;
+    font-weight: 500;
+  }
 }
 .sectE {
   padding-top: 70px;
@@ -294,18 +314,18 @@ svg {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 80px 50px;
-  background-color: #fac600;
+  background-color: #ff5402;
   position: relative;
   z-index: 2;
   h5 {
-    color: #000;
+    color: #fff;
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 60px;
   }
   &::before {
     content: url("../assets/quote.svg");
-    opacity: 0.7;
+    opacity: 0.4;
     position: absolute;
     top: 0;
     left: 0;
@@ -319,12 +339,13 @@ svg {
     margin-left: 20px;
     h6 {
       font-size: 18px;
-      color: #000;
+      color: #fff;
       margin-bottom: 3px;
     }
     p {
       font-size: 15px;
       font-weight: 600;
+      color: #fff;
     }
   }
 }

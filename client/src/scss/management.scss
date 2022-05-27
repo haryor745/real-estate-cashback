@@ -1,0 +1,95 @@
+.management {
+  margin-top: 50px;
+  background-color: #fff;
+  padding-bottom: 200px;
+  position: relative;
+  z-index: 1;
+  padding-top: 70px;
+}
+.glInner {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.glText {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  h2 {
+    max-width: 570px;
+    font-size: 38px;
+  }
+}
+.glGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 10px;
+}
+.pCard2,
+.pCard4 {
+  margin-top: 70px;
+}
+.pCard {
+  .adminName {
+    color: #fff;
+    background-color: #ff5402;
+    padding: 10px;
+    max-width: 420px;
+    margin-bottom: 5px;
+  }
+  p {
+    color: #959595;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 1000px) {
+  .glText {
+    h2 {
+      font-size: 34px;
+    }
+  }
+  .glGrid {
+    column-gap: 35px;
+  }
+}
+@media (max-width: 750px) {
+  .glText {
+    margin-top: 10px;
+    margin-bottom: 70px;
+    h2 {
+      max-width: none;
+      text-align: center;
+      font-size: 28px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .glGrid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  .pCard2,
+  .pCard4,
+  .pCard6 {
+    margin-top: 0px;
+  }
+  .pCard {
+    .adminName {
+      text-align: center;
+      max-width: none;
+    }
+    p {
+      text-align: center;
+      margin-left: none;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .glText {
+    h2 {
+      font-size: 28px;
+    }
+  }
+}
